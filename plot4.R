@@ -8,7 +8,7 @@ hpc<-read.delim("household_power_consumption.txt",sep=";",skip=66637,nrows=2880,
 
 hpc$DateTime<-dmy_hms(paste(hpc$Date,hpc$Time))
 
-png(file="plot4.png")
+png(file="plot4.png",height=480,width=480)
 par(mfcol=c(2,2))
 with(hpc,plot(DateTime,Global_active_power,type="n",ylab="Global Active Power (kilowatts)",xlab=""))
 with(hpc,lines(DateTime,Global_active_power))

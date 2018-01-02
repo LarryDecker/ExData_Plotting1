@@ -4,6 +4,6 @@ unzip("household_power_consumption.zip")
 
 dfnames<-read.delim("household_power_consumption.txt",sep=";",skip=0,nrows=1,header=TRUE)
 hpc<-read.delim("household_power_consumption.txt",sep=";",skip=66637,nrows=2880,col.names=names(dfnames))
-png(file="plot1.png")
+png(file="plot1.png",height=480,width=480)
 hist(hpc$Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
 dev.off()
